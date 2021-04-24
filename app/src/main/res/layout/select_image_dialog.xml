@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="10dp"
+    android:background="#303F46">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Επέλεξε εισαγωγή"
+        android:textSize="23sp"
+        android:textColor="#fff"
+        android:layout_margin="15dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:id="@+id/camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cameraIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/camera_colored" />
+
+        <TextView
+            android:layout_toEndOf="@+id/cameraIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Τράβηξε φωτογραφία"
+            android:layout_centerInParent="true"
+            android:paddingStart="20dp"
+            android:textSize="20sp"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/camera"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gallery_colored" />
+
+        <TextView
+            android:layout_toEndOf="@+id/imageIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Εικόνες"
+            android:layout_centerInParent="true"
+            android:paddingStart="20dp"
+            android:textSize="20sp"
+            android:textColor="#fff"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/image"
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Κλείσιμο"
+        android:textColor="#C2706B"
+        android:textSize="20sp"
+        android:layout_margin="15dp"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/cardview"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+app:cardCornerRadius="4dp"
+android:layout_marginVertical="10dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/expandViewBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ic_keyboard_arrow_down_black_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsET" />
+
+    <EditText
+        android:id="@+id/instructionsET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Οδηγίες"
+        android:inputType="textMultiLine"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/stepNumberTV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/stepNumberTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Βήμα"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="5dp"
+        android:text="Θα ήθελες να προσθέσεις χρονόμετρο, ώστε να ειδοποιηθεί ο χρήστης;"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/togglerSW"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="10dp"
+        android:hint="Χρόνος"
+        android:text=""
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/togglerSW"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/togglerSW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:checked="true"
+        android:textOff="Όχι"
+        android:textOn="Ναι"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:showText="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_max="wrap"
+        app:layout_constraintWidth_percent="0.9"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expandViewBtn"
+        tools:itemCount="2"
+        tools:listitem="@layout/image_item"
+        />
+
+    <ImageButton
+        android:id="@+id/addNewImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="3dp"
+        android:background="@drawable/add_photo_alternate_40"
+        android:backgroundTint="#000"
+        app:layout_constraintStart_toEndOf="@id/imagesRV"
+        app:layout_constraintTop_toBottomOf="@id/expandViewBtn" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="addNewImage,imagesRV,textView3,togglerSW"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imagesRV,addNewImage" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

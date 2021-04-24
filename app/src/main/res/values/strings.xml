@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">myCookApp</string>
+    <string name="chooseTheQuantities">Επέλεξε τις ποσότητες</string>
+    <string name="title_activity_add_edit_recipe">AddEditRecipeActivity</string>
+    <string name="newIngredient">Νέο υλικό</string>
+    <string name="ingredients">Συστατικά</string>
+    <string name="instructions">Μέθοδος εκτέλεσης</string>
+    <string name="quantity_hint"><font size='13'>Ποσότητα</font></string>
+    <string name="back">Πίσω</string>
+    <string name="choose">Επιλογή</string>
+    <string name="resetBtn">Επαναφορά</string>
+    <string name="startBtn">Ξεκίνα</string>
+    <string name="pauseBtn">Παύση</string>
+    <string name="continueBtn">Συνέχισε</string>
+    <plurals name="time">
+        <item quantity="one">Χρόνος ψησίματος: %1$d Ώρα και %2$d λεπτά</item>
+        <item quantity="other">Χρόνος ψησίματος: %1$d Ώρες και %2$d λεπτά</item>
+    </plurals>
+    <plurals name="timeZeroHours">
+        <item quantity="one">Χρόνος ψησίματος: %1$d λεπτό</item>
+        <item quantity="other">Χρόνος ψησίματος: %1$d λεπτά</item>
+    </plurals>
+    <plurals name="timeZeroMinutes">
+        <item quantity="one">Χρόνος ψησίματος: %1$d Ώρα</item>
+        <item quantity="other">Χρόνος ψησίματος: %1$d Ώρες</item>
+    </plurals>
+
+</resources>
